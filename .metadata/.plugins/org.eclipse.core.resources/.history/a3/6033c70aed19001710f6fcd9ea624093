@@ -1,0 +1,12 @@
+
+public class Princimal {
+
+	public static void main(String[] args) {
+		// Creando objetos de la clase coche.
+		// NombreClase nombreObjeto = new NombreClase(...);
+		
+		Coche chocheJoseM = new Coche("4279DHD", "Audi", "A3", "negro", 2553.75, 1900, 1.2, 'd', true, 5);
+
+	}
+
+}

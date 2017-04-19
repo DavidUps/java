@@ -1,0 +1,41 @@
+// 0 clase
+// 1 Atributos
+// 2 Constrcutor
+// 3 Get & Set
+// 4 ToString
+// Principal
+//	->3 Motos
+//  ->Get/Set
+//  ->ToString
+public class Moto {
+
+	String matricula;
+	String marca;
+	String modelo;
+	int cilindrada;
+	boolean itv;
+	int ano;
+	boolean proteccion;
+	boolean pata;
+	int ruedas;
+	double deposito;
+	char tipo;
+	
+	public Moto(String matricula, String marca, String modelo, int cilindrada, boolean itv, int ano, boolean proteccion,
+			boolean pata, int ruedas, double deposito, char tipo) {
+		this.matricula = matricula;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.cilindrada = cilindrada;
+		this.itv = itv;
+		this.ano = ano;
+		this.proteccion = proteccion;
+		this.pata = pata;
+		this.ruedas = ruedas;
+		this.deposito = deposito;
+		this.tipo = tipo;
+	}
+	
+	
+
+}
