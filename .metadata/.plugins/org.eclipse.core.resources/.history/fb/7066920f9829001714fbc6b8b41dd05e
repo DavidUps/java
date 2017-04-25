@@ -1,0 +1,14 @@
+
+public class Vehiculo {
+
+	String matricula;
+	String marca;
+	String modelo;
+	int cilindrada;
+	boolean itv;
+	
+	
+	
+	
+	
+}
