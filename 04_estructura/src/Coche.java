@@ -1,70 +1,147 @@
 //Clase coche realizada el 5/04/2017 por DavidUPS
-public class Coche extends Vehiculo{
+public class Coche {
 
 	// 1. Añadir los atributos de la clase.
+
+	String matricula;
+	String marca;
+	String modelo;
 	String color;
 	double precio;
+	int cilindrada;
 	double peso;
 	char combustible;
+	boolean itv;
 	int plazas;
-	
-	public Coche(String matricula, String marca, String modelo, int cilindrada, boolean itv, String color,
-			double precio, double peso, char combustible, int plazas) {
-		super(matricula, marca, modelo, cilindrada, itv);
+
+	// 2 Método constructor.
+	public Coche(String matricula, String marca, String modelo, String color, double precio, int cilindrada,
+			double peso, char combustible, boolean itv, int plazas) {
+		this.matricula = matricula;
+		this.marca = marca;
+		this.modelo = modelo;
 		this.color = color;
 		this.precio = precio;
+		this.cilindrada = cilindrada;
 		this.peso = peso;
 		this.combustible = combustible;
+		this.itv = itv;
 		this.plazas = plazas;
 	}
 
-	protected String getColor() {
+	// o
+	// public Coche(String ma, String m, String mo, String c, double p, int ci,
+	// double pe, char com, boolean i, int pl) {
+	// ma = matricula;
+	// m = marca;
+	// mo = modelo;
+	// c = color;
+	// p = precio;
+	// ci = cilindrada;}
+
+	// 3. Crear metodos GET y SET.
+	// Source Getter and Setter.
+	// GET nos develve el valor de un atributo.
+	// SET nos cambia el valor de un atributo.
+
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public String getColor() {
 		return color;
 	}
 
-	protected void setColor(String color) {
+	public void setColor(String color) {
 		this.color = color;
 	}
 
-	protected double getPrecio() {
+	public double getPrecio() {
 		return precio;
 	}
 
-	protected void setPrecio(double precio) {
+	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
 
-	protected double getPeso() {
+	public int getCilindrada() {
+		return cilindrada;
+	}
+
+	public void setCilindrada(int cilindrada) {
+		this.cilindrada = cilindrada;
+	}
+
+	public double getPeso() {
 		return peso;
 	}
 
-	protected void setPeso(double peso) {
+	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 
-	protected char getCombustible() {
+	public char getCombustible() {
 		return combustible;
 	}
 
-	protected void setCombustible(char combustible) {
+	public void setCombustible(char combustible) {
 		this.combustible = combustible;
 	}
 
-	protected int getPlazas() {
+	public boolean isItv() {
+		return itv;
+	}
+
+	public void setItv(boolean itv) {
+		this.itv = itv;
+	}
+
+	public int getPlazas() {
 		return plazas;
 	}
 
-	protected void setPlazas(int plazas) {
+	public void setPlazas(int plazas) {
 		this.plazas = plazas;
 	}
+	//4. Crear metodo toString
+	// 	 Boton derecho > source > generateString
 
 	@Override
 	public String toString() {
-		return "Coche [color=" + color + ", precio=" + precio + ", peso=" + peso + ", combustible=" + combustible
-				+ ", plazas=" + plazas + "]";
+		return "Coche [matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color
+				+ ", precio=" + precio + ", cilindrada=" + cilindrada + ", peso=" + peso + ", combustible="
+				+ combustible + ", itv=" + itv + ", plazas=" + plazas + "]";
 	}
-	
-	
-	
+
+	//5. Creación manual de métodos
+	//Método que añade un 21% del IVA al precion del coche
+
+	public double precioConIVA(){
+		
+		double precioTotal = 0;
+		precioTotal = precio * 1.21;
+		return precioTotal;
+		
+	}
 	
 }

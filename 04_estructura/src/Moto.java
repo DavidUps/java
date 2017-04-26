@@ -1,6 +1,19 @@
+// 0 clase 
+// 1 Atributos 
+// 2 Constrcutor  
+// 3 Get & Set 
+// 4 ToString
+// Principal
+//	->3 Motos
+//  ->Get/Set
+//  ->ToString
+public class Moto {
 
-public class Moto extends Vehiculo{
-	
+	String matricula;
+	String marca;
+	String modelo;
+	int cilindrada;
+	boolean itv;
 	int ano;
 	boolean proteccion;
 	boolean pata;
@@ -10,7 +23,11 @@ public class Moto extends Vehiculo{
 	
 	public Moto(String matricula, String marca, String modelo, int cilindrada, boolean itv, int ano, boolean proteccion,
 			boolean pata, int ruedas, double deposito, char tipo) {
-		super(matricula, marca, modelo, cilindrada, itv);
+		this.matricula = matricula;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.cilindrada = cilindrada;
+		this.itv = itv;
 		this.ano = ano;
 		this.proteccion = proteccion;
 		this.pata = pata;
@@ -19,62 +36,111 @@ public class Moto extends Vehiculo{
 		this.tipo = tipo;
 	}
 
-	protected int getAno() {
+	//Getter and Setter
+	
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public int getCilindrada() {
+		return cilindrada;
+	}
+
+	public void setCilindrada(int cilindrada) {
+		this.cilindrada = cilindrada;
+	}
+
+	public boolean isItv() {
+		return itv;
+	}
+
+	public void setItv(boolean itv) {
+		this.itv = itv;
+	}
+
+	public int getAno() {
 		return ano;
 	}
 
-	protected void setAno(int ano) {
+	public void setAno(int ano) {
 		this.ano = ano;
 	}
 
-	protected boolean isProteccion() {
+	public boolean isProteccion() {
 		return proteccion;
 	}
 
-	protected void setProteccion(boolean proteccion) {
+	public void setProteccion(boolean proteccion) {
 		this.proteccion = proteccion;
 	}
 
-	protected boolean isPata() {
+	public boolean isPata() {
 		return pata;
 	}
 
-	protected void setPata(boolean pata) {
+	public void setPata(boolean pata) {
 		this.pata = pata;
 	}
 
-	protected int getRuedas() {
+	public int getRuedas() {
 		return ruedas;
 	}
 
-	protected void setRuedas(int ruedas) {
+	public void setRuedas(int ruedas) {
 		this.ruedas = ruedas;
 	}
 
-	protected double getDeposito() {
+	public double getDeposito() {
 		return deposito;
 	}
 
-	protected void setDeposito(double deposito) {
+	public void setDeposito(double deposito) {
 		this.deposito = deposito;
 	}
 
-	protected char getTipo() {
+	public char getTipo() {
 		return tipo;
 	}
 
-	protected void setTipo(char tipo) {
+	public void setTipo(char tipo) {
 		this.tipo = tipo;
 	}
 
+	// toString
+	
 	@Override
 	public String toString() {
-		return "Moto [ano=" + ano + ", proteccion=" + proteccion + ", pata=" + pata + ", ruedas=" + ruedas
-				+ ", deposito=" + deposito + ", tipo=" + tipo + "]";
+		return "Moto [matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", cilindrada=" + cilindrada
+				+ ", itv=" + itv + ", ano=" + ano + ", proteccion=" + proteccion + ", pata=" + pata + ", ruedas="
+				+ ruedas + ", deposito=" + deposito + ", tipo=" + tipo + "]";
 	}
 	
+	//Capacidad sin reserva
 	
-	
-	
+	public double depositoSinReserva(){
+		
+		double depositoSinReserva = 0;
+		depositoSinReserva = deposito *1.20;
+		return depositoSinReserva;
+	}
 }
-	

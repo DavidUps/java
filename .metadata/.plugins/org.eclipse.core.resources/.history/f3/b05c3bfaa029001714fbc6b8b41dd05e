@@ -1,0 +1,11 @@
+
+public class Persona {
+
+	protected String dni;
+	protected String nombre;
+	protected String apellido1;
+	protected String apellido2;
+	
+	
+}
+
