@@ -1,11 +1,14 @@
 
-public class Alumno {
+public class Alumno extends Persona {
 
 	int curso;
 	int anhoNac;
 	char sexo; //'h'-> hombre | 'm' -> mujer
 	
-	public Alumno(int curso, int anhoNac, char sexo) {
+	
+
+	public Alumno(String dni, String nombre, String apellido1, String apellido2, int curso, int anhoNac, char sexo) {
+		super(dni, nombre, apellido1, apellido2);
 		this.curso = curso;
 		this.anhoNac = anhoNac;
 		this.sexo = sexo;
@@ -37,8 +40,11 @@ public class Alumno {
 
 	@Override
 	public String toString() {
-		return "Alumno [curso=" + curso + ", anhoNac=" + anhoNac + ", sexo=" + sexo + "]";
+		return "Alumno [dni=" + dni + ", nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2
+				+ ", curso=" + curso + ", anhoNac=" + anhoNac + ", sexo=" + sexo + "]";
 	}
+
+	
 	
 	
 }
